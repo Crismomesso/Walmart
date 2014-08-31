@@ -42,11 +42,9 @@ public class GrafoDao extends BaseDao {
 	   * @return Grafot
 	   */
 		public Grafot buscaGrafo(Grafot grafo) {
-			this.estabeleceConexao();
-			String nomeMapa = grafo.getNomeMapa();
 			try {
-				
-
+				this.estabeleceConexao();
+				String nomeMapa = grafo.getNomeMapa();
 				Query query = this.getEntityManager().createNamedQuery("Grafot.findByNome",Grafot.class);
 				query.setParameter("nome", nomeMapa);
 				if(query.getResultList().size()!=0){
@@ -70,11 +68,9 @@ public class GrafoDao extends BaseDao {
 	   * @return boolean
 	   */
 	public boolean existeGrafo(Grafot grafo) {
-		this.estabeleceConexao();
-		String nomeMapa = grafo.getNomeMapa();
 		try {
-			
-
+			this.estabeleceConexao();
+			String nomeMapa = grafo.getNomeMapa();
 			Query query = this.getEntityManager().createNamedQuery("Grafot.findByNome",Grafot.class);
 			query.setParameter("nome", nomeMapa);
 			if(query.getResultList().size()!=0){
