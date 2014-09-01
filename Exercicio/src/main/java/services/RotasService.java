@@ -56,12 +56,6 @@ public class RotasService {
 
 		} catch (PersistenciaGrafoExcpetion e) {
 			resp.setResultado(e.getMessage());
-		} catch (JsonParseException e) {
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -84,14 +78,10 @@ public class RotasService {
 			EntradaCalculo entrada = objectMapper.readValue(json.toString(),EntradaCalculo.class);
 			CalculoRotasBll calc = new CalculoRotasBll();
 			resp=calc.calculaRota(entrada);
-		} catch (JsonParseException e) {
-			e.printStackTrace();
-		} catch (JsonMappingException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (CalculoRotaException e) {
+		}  catch (CalculoRotaException e) {
 			resp.setResultado(e.getMessage());
+		}catch (Exception e) {
+			e.printStackTrace();
 		}
 		return resp;
 	}
