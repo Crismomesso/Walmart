@@ -111,20 +111,30 @@ public class CalculoRotasBll {
 		grafo.setNomeMapa(entrada.getNomeMapa().toUpperCase().trim());
 		grafo = dados.buscaGrafo(grafo);
 
-		if (entrada.getVertice1().equals("") || entrada.getAutonomia() <= 0
-				|| entrada.getValorLitro() <= 0
-				|| entrada.getVertice2().equals("")) {
-			throw new CalculoRotaException(
-					util.getConfProperties("dadosEntradaInvalidos"));
-		}
 
 		// verifica se existe o grafo na base
 		if (grafo != null) {
+			if (entrada.getVertice1().equals("") || entrada.getAutonomia() <= 0
+					|| entrada.getValorLitro() <= 0
+					|| entrada.getVertice2().equals("")) {
+				throw new CalculoRotaException(
+						util.getConfProperties("dadosEntradaInvalidos"));
+			}
 			String resposta = null;
 			List<Verticet> verticets = grafo.getVerticets();
 
 			// busca vertice da origem da rota
 			Verticet vert = buscaVertice(entrada.getVertice1(), verticets);
+			Verticet vertDestino = buscaVertice(entrada.getVertice2(),
+					verticets);
+			if (vert == null) {
+				throw new CalculoRotaException(
+						util.getConfProperties("verticeOrigemNaoExiste"));
+			}
+			if (vertDestino == null) {
+				throw new CalculoRotaException(
+						util.getConfProperties("verticeDestinoNaoExiste"));
+			}
 
 			// gera caminhos utilizando o algoritmo de DIJKSTRA
 			this.geraCaminhos(vert, verticets);
