@@ -124,6 +124,10 @@ Exemplo de requisição JSON para pesquisa de rota
 
 }
 
+## Testes unitários
+
+-> Para os testes unitários utilizei o framework junit e a ide de consumo de webservice SoupUi
+
 ## Javadoc
 
 -> O java doc da aplicação se encontra em "Walmart\Exercicio\doc"
