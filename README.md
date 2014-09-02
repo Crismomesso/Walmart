@@ -1,7 +1,5 @@
 # Exercicio Walmart
 
-
-
 ## Tecnologias utilizadas
 
 Maven 3.2.3 - Foi utilizado o maven para o gerenciamento de dependência, buscando nos repositórios os jars necessários para a execução do sistema    
@@ -17,6 +15,8 @@ Jersey 1.18.1 - Framework que implementa especificação para o JAX-RS. Basicame
 Eclipse Kepler Service Release 2
 
 JUNIT 4.0  - Para execução dos testes unitários, foi optado pela utilização do junit.
+
+SoapUI 5.0 - Interface para consumo de webservice. Optei por também realizar testes utilizando essa ide, pela facilidade de executar requisições em webservices
 
 ## Instalação
 
@@ -44,15 +44,28 @@ um plugin que sobe o servidor e atrela o projeto automáticamente.
 
 ## Utilização 
 
+###Orientações
+
+-> No sistema existe dois serviços implementados. O primeiro de gravação de mapas, e o segundo de pesquisa de rotas. 
+Para se pesquisar uma rota, é necessário previamente gravar um mapa na base, para isso é necessário utilizar o serviço "gravaMapa", após o mapa persistido, utiliza-se o serviço "pesquisaRota"
+para achar uma rota valida.
+
 ###entrada de dados 
 
 -> Para a estrutura de entrada de dados foi optado pelo padrão JSON pela sua simplicidade e uso difundido.
+
+
+### WADL
+
+-> Após o servidor estar rodando a aplicação , a especificação WADL estará na URL  "http://<Endereço servidor: porta>/Exercicio/application.wadl"
 
 ### PUT
 
 http://<Endereço servidor: porta>/Exercicio/rotas/gravaMapa
 
 Gravar mapas:
+
+Exemplo de requisição JSON para persistência de mapas
 
 {
 
@@ -83,6 +96,8 @@ http://<Endereço servidor: porta>/Exercicio/rotas/pesquisaRota
 
 Pesquisar rota:
 
+Exemplo de requisição JSON para pesquisa de rota
+
 {
 
 	"nomeMapa":"mapa SP",
@@ -96,3 +111,18 @@ Pesquisar rota:
 	"valorLitro":"2.5"
 	
 }
+
+### Resposta do webservice
+
+-> JSON contendo a mensagem do resultado do serviço. 
+
+{
+
+"resultado": "menssagem contendo o resultado"
+
+}
+
+## Javadoc
+
+-> O java doc da aplicação se encontra em "Walmart\Exercicio\doc"
+
