@@ -68,7 +68,7 @@ public class RotasService {
 	 * @return json
 	 */
 	@POST
-	@Path("/calculo")
+	@Path("/pesquisaRota")
 	@Consumes(MediaType.APPLICATION_JSON)
 	@Produces(MediaType.APPLICATION_JSON)
 	public RespostaWebService calcularRota(JSONObject json) {
