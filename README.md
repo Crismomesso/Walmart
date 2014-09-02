@@ -46,6 +46,8 @@ um plugin que sobe o servidor e atrela o projeto automáticamente.
 
 ###entrada de dados 
 
+-> Para a estrutura de entrada de dados foi optado pelo padrão JSON pela sua simplicidade e uso difundido.
+
 ### PUT
 
 http://<Endereço servidor: porta>/Exercicio/rotas/gravaMapa
