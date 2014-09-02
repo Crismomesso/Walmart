@@ -39,7 +39,9 @@ um plugin que sobe o servidor e atrela o projeto automáticamente.
 
 ## Arquitetura
 
--> Optei por dividir o sistema em camada de serviço, negocios , dados. 
+-> Optei por dividir o sistema em camada de serviço, negocios ,dados e modelos. 
+
+-> Todas as menssagens retornadas pelo sistema se encontram no arquivo de configuração localizado em "/Exercicio/conf/conf.properties"
 
 
 ## Utilização 
