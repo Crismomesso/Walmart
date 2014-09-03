@@ -18,6 +18,8 @@ JUNIT 4.0  - Para execução dos testes unitários, foi optado pela utilização
 
 SoapUI 5.0 - Interface para consumo de webservice. Optei por também realizar testes utilizando essa ide, pela facilidade de executar requisições em webservices
 
+MySql 5.6.20 - Banco de dados
+
 ## Instalação
 
 ->Baixar o projeto do endereço https://github.com/Crismomesso/Walmart
