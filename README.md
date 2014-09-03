@@ -59,11 +59,11 @@ para achar uma rota valida.
 
 ### WADL
 
--> Após o servidor estar rodando a aplicação , a especificação WADL estará na URL  "http://<Endereço servidor: porta>/Exercicio/application.wadl"
+-> Após o servidor estar rodando a aplicação , a especificação WADL estará na URL  "http://Endereço servidor: porta/Exercicio/application.wadl"
 
 ### PUT
 
-http://<Endereço servidor: porta>/Exercicio/rotas/gravaMapa
+http://Endereço servidor: porta/Exercicio/rotas/gravaMapa
 
 Gravar mapas:
 
@@ -94,7 +94,7 @@ Exemplo de requisição JSON para persistência de mapas
 
 ### POST
 
-http://<<Endereço servidor: porta>>/Exercicio/rotas/pesquisaRota
+http://Endereço servidor: porta/Exercicio/rotas/pesquisaRota
 
 Pesquisar rota:
 
