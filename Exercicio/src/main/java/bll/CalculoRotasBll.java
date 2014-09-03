@@ -127,10 +127,12 @@ public class CalculoRotasBll {
 			Verticet vert = buscaVertice(entrada.getVertice1(), verticets);
 			Verticet vertDestino = buscaVertice(entrada.getVertice2(),
 					verticets);
+			//Verifica se origem existe
 			if (vert == null) {
 				throw new CalculoRotaException(
 						util.getConfProperties("verticeOrigemNaoExiste"));
 			}
+			//Verifica se destino existe
 			if (vertDestino == null) {
 				throw new CalculoRotaException(
 						util.getConfProperties("verticeDestinoNaoExiste"));
