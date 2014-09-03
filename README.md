@@ -94,7 +94,7 @@ Exemplo de requisição JSON para persistência de mapas
 
 ### POST
 
-http://<Endereço servidor: porta>/Exercicio/rotas/pesquisaRota
+http://<<Endereço servidor: porta>>/Exercicio/rotas/pesquisaRota
 
 Pesquisar rota:
 
@@ -126,7 +126,7 @@ Exemplo de requisição JSON para pesquisa de rota
 
 ## Testes unitários
 
--> Para os testes unitários utilizei o framework junit e a ide de consumo de webservice SoupUi
+-> Para os testes unitários utilizei o framework junit e a ide de consumo de webservice SoupUi.
 
 ## Javadoc
 
